@@ -167,11 +167,11 @@ DebugError		( const char *String ,
 {
 	vprintf( "_ERROR_: \n" , arg );
 	PrintCommandLine( String , arg );
-	vprintf( "_END_ERROR_: \n" , arg );
+	vprintf( "_END_ERROR_\n\n" , arg );
 
 	PrintLogFile("_ERROR_: \n" , NULL);
 	PrintLogFile( String , arg );
-	PrintLogFile("_END_ERROR_: \n" , NULL);
+	PrintLogFile("_END_ERROR_\n\n" , NULL);
 
 	return 0;
 }
@@ -182,11 +182,11 @@ DebugWarning	( const char *String ,
 {
 	vprintf( "_WARNING_: \n" , arg );
 	PrintCommandLine( String , arg );
-	vprintf( "_END_WARNING_\n" , arg );
+	vprintf( "_END_WARNING_\n\n" , arg );
 
 	PrintLogFile("_WARNING_: \n" , NULL);
 	PrintLogFile( String , arg );
-	PrintLogFile("_END_WARNING_\n" , NULL);
+	PrintLogFile("_END_WARNING_\n\n" , NULL);
 
 	return 0;
 }
